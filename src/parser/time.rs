@@ -11,7 +11,7 @@ use crate::parser::{string, Context};
 
 /// consume consumes an element as a time.
 pub fn consume<R: Read>(context: &mut Context<R>) -> Result<DateTime<Utc>> {
-    let time = string::consume(context, "time", false)?;
+    let time = string::consume(context, "time", true)?;
 
     let time =
         DateTime::parse_from_rfc3339(&time).chain_err(|| "error while parsing time as RFC3339")?;

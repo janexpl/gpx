@@ -39,6 +39,9 @@ pub fn consume<R: Read>(context: &mut Context<R>) -> Result<Metadata> {
                 "keywords" => {
                     metadata.keywords = Some(string::consume(context, "keywords", true)?);
                 }
+                "copyright" => {
+                    metadata.copyright = Some(string::consume(context, "copyright", true)?);
+                }
                 "time" => {
                     metadata.time = Some(time::consume(context)?);
                 }

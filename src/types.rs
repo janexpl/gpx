@@ -60,7 +60,8 @@ pub struct Metadata {
     /// Keywords associated with the file. Search engines or databases can use
     /// this information to classify the data.
     pub keywords: Option<String>,
-    /*copyright: GpxCopyrightType,*/
+
+    pub copyright: Option<String>,
     /// Bounds for the tracks in the GPX.
     pub bounds: Option<Rect<f64>>,
     /*extensions: GpxExtensionsType,*/
